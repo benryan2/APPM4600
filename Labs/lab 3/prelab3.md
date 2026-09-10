@@ -30,7 +30,7 @@ def convOrder(p_vector,tol,max_order=5):
         print(order)
         lam[0] /= e[1]
         for i in range(1, len(lam)-1):
-            lam[i] /= e[i+1]
+            lam[i] = abs(lam[i] / e[i+1])
             if(abs(lam[i]-lam[i-1]) < tol):
                 if(order == 1 and (lam[i] < 0 or lam[i] > 10)): break
                 return [order,lam[i]]
@@ -45,4 +45,4 @@ It took 12 iterations to reach a fixed point with a tolerance of $10^{-10}$
 
 2b)
 
-Using the above method, I found that the algorithm converges at a 2nd order rate, and the associated value of $\lambda$ is $\lambda\approx-7.85952371$
+Using the above method, I found that the algorithm converges at a 2nd order rate, and the associated value of $\lambda$ is $\lambda\approx7.85952371$

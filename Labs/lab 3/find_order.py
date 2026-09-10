@@ -19,7 +19,7 @@ def driver():
 
 def convOrder(p_vector,tol,max_order=5):
     p = p_vector[-1]
-    e = p_vector-p
+    e = abs(p_vector-p)
     print(e)
     order = 0
     lam = e.copy()
@@ -28,7 +28,7 @@ def convOrder(p_vector,tol,max_order=5):
         print(order)
         lam[0] /= e[1]
         for i in range(1, len(lam)-1):
-            lam[i] /= e[i+1]
+            lam[i] = abs(lam[i] / e[i+1])
             if(abs(lam[i]-lam[i-1]) < tol):
                 if(order == 1 and (lam[i] < 0 or lam[i] > 10)): break
                 return [order,lam[i]]
