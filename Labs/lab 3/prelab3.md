@@ -32,7 +32,7 @@ def convOrder(p_vector,tol,max_order=5):
         for i in range(1, len(lam)-1):
             lam[i] = abs(lam[i] / e[i+1])
             if(abs(lam[i]-lam[i-1]) < tol):
-                if(order == 1 and (lam[i] < 0 or lam[i] > 10)): break
+                if(order == 1 and (lam[i] < 0 or lam[i] > 1)): break
                 return [order,lam[i]]
 
     print('error')
