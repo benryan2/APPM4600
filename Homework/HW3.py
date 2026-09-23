@@ -209,4 +209,7 @@ def fixedpt_iteration(f,x0,tol,Nmax):
      ier = 1
      return[points,ier]
 
-problem3()
+# problem3()
+f = lambda x: x**3 + x - 4
+[res,ier] = bisection(f,1,4,1e-3)
+print(res,ier)
