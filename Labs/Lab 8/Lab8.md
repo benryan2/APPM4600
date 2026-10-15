@@ -14,3 +14,4 @@ def prelab(x0,y0,x1,y1,a):
 
 ***Lab Day***
 
+Worked through 3, lots of code debuggin, code all on github!
