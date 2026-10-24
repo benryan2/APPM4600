@@ -193,7 +193,7 @@ def driver():
     fp = lambda x: (-2*x)/((1+x**2)**2)
     n_vals = [5,10,15,20]
 
-    '''
+    
     # Legrange
     fig,ax = plt.subplots(nrows=2,ncols=2,figsize=(8,8))
     for i,n in enumerate(n_vals):
@@ -289,7 +289,7 @@ def driver():
 
     plt.suptitle("Clamped Cubic Spline From Chebyshev Points")
     plt.show()
-    '''
+    
     # Periodic Spline
     f = lambda x: np.sin(10*x)
     fp = lambda x: 10*np.cos(10*x)
